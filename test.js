@@ -1,35 +1,30 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-let initialArtists = [
-    { id: 0, name: 'Marta Colvin Andrade' },
-    { id: 1, name: 'Lamidi Olonade Fakeye' },
-    { id: 2, name: 'Louise Nevelson' },
-];
+const App = () => {
+    const [list, setList] = useState([
+        { id: 1, name: '张三', age: 25 },
+        { id: 2, name: '李四', age: 30 }
+    ]);
 
-export default function List() {
-    const [artists, setArtists] = useState(
-        initialArtists
-    );
+    const updateItem = (id, newName) => {
+        setList(prevList =>
+            prevList.map(item =>
+                item.id === id ? { ...item, name: newName } : item
+            )
+        );
+    };
 
     return (
-        <>
-            <h1>振奋人心的雕塑家们：</h1>
-            <ul>
-                {artists.map(artist => (
-                    <li key={artist.id}>
-                        {artist.name}{' '}
-                        <button onClick={() => {
-                            setArtists(
-                                artists.filter(a =>
-                                    a.id !== artist.id
-                                )
-                            );
-                        }}>
-                            删除
-                        </button>
-                    </li>
-                ))}
-            </ul>
-        </>
+        <div>
+            {list.map(item => (
+                <div key={item.id}>
+                    <p>姓名: {item.name}</p>
+                    <p>年龄: {item.age}</p>
+                </div>
+            ))}
+            <button onClick={() => updateItem(1, '赵六')}>修改张三的名字</button>
+        </div>
     );
-}
+};
+
+export default App;
