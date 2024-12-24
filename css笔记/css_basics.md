@@ -11,7 +11,7 @@ CSS 属性可以按照功能和作用分为以下几个大类，方便记忆和�
 - `width`, `height`, `max-width`, `max-height`, `min-width`, `min-height`
 - `margin`, `padding`, `border`, `box-sizing`
 
-### 定位：
+### 定位
 - `position`, `top`, `right`, `bottom`, `left`, `z-index`
 
 ### 浮动与清除：
