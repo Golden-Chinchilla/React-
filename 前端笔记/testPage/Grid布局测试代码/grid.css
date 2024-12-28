@@ -1,0 +1,34 @@
+.container {
+    width: 500px;
+    height: 500px;
+    display: grid;
+
+    /* 划分行和列 */
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    /* 划分格子间的间距，单独划分行或列间距可用row-gap, column-gap */
+    gap: 1px;
+
+    /* 设置格子的排列顺序 */
+    grid-auto-flow: column;
+
+    border: 2px;
+    border-color: salmon;
+    border-style: solid;
+}
+
+.container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: rgb(69, 0, 165);
+    border-style: solid;
+    background-color: antiquewhite;
+}
+
+/* 合并单元格 */
+.box1 {
+    grid-row: 2/4;
+    grid-column: 2/4;
+}
