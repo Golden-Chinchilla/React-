@@ -1,0 +1,26 @@
+.container {
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+    display: flex;
+
+    /* 修改主轴方向:row/column，start/end的位置也会相对变化 */
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* flex-direction, flex-wrap 的简写属性 */
+    /* flex-flow: row wrap; */
+
+    /* 主轴对齐方式，注意：flex-direction: row 就是横向居中，反之就是纵向居中 */
+    /* justify-content: center; */
+    align-items: flex-end;
+    /* align-content: flex-start; */
+}
+
+.container>div {
+    background-color: rgb(134, 103, 164);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+}

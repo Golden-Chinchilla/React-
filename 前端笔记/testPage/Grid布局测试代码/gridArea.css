@@ -1,0 +1,58 @@
+.container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    grid-template-areas:
+        'box_1 box_1 box_1'
+        'box_2 box_3 box_3'
+        'box_2 box_4 box_4';
+
+}
+
+.container>div {
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* grid-template-areas 中的引用的内容是 grid-area 中的值 */
+.box1 {
+    grid-area: box_1;
+    background-color: darkgreen;
+}
+
+.box2 {
+    grid-area: box_2;
+    background-color: aqua;
+}
+
+.box3 {
+    grid-area: box_3;
+    background-color: blue;
+}
+
+.box4 {
+    grid-area: box_4;
+    background-color: brown;
+}
+
+.box5 {
+    grid-area: box_5;
+}
+
+.box6 {
+    grid-area: box_6;
+}
+
+.box7 {
+    grid-area: box_7;
+}
+
+.box8 {
+    grid-area: box_8;
+}
+
+.box9 {
+    grid-area: box_9;
+}
