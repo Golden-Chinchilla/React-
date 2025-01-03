@@ -1,5 +1,14 @@
-.content {
-    display: inline-block;
-    width: 50vw;
-    background-color: aquamarine;
+.d1 {
+    color: rgb(2, 186, 54);
+}
+
+.d2 {
+    color: rgb(238, 0, 255);
+    font-size: large;
+    border: 1px solid black;
+}
+
+.li {
+    color: unset;
+
 }
